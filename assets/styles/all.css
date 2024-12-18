@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EEEEEE;
+}
+.nav-link{
+    color: #EEEEEE !important;
+}
+.nav-link:hover{
+    color: #00ADB5 !important;
+    transition: 200ms linear !important;
+}
+.navbar{
+    background-color: #393E46 !important;
+}
+.navbar-brand{
+    color: #00ADB5 !important;
+}
+.mb-1{
+    color: #00ADB5 !important;
+}
+.btn-primary{
+    background-color: #00ADB5 !important;
+    transition: 200ms linear !important;
+}
+.btn-primary:hover{
+    background-color: #00868d !important;
+}

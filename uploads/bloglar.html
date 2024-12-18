@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IronWork | Ana Sayfa</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/loading.css" />
+    <link rel="stylesheet" href="styles/lightbox.css" />
+    <link rel="stylesheet" href="styles/panelkullanici.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".up").hide();
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 200) {
+            $(".up").fadeIn();
+          } else {
+            $(".up").fadeOut();
+          }
+        });
+        $(".up").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 800);
+          return false;
+        });
+      });
+      window.addEventListener("load", function () {
+        $(".loading").fadeOut(500);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+    <div class="loading">
+      <section id="global">
+        <div id="top" class="mask">
+          <div class="plane"></div>
+        </div>
+        <div id="middle" class="mask">
+          <div class="plane"></div>
+        </div>
+
+        <div id="bottom" class="mask">
+          <div class="plane"></div>
+        </div>
+
+        <p><i>YÜKLENİYOR...</i></p>
+      </section>
+    </div>
+
+    <div class="up">
+      <i class="fa-sharp fa-solid fa-caret-up" style="color: #ffffff"></i>
+    </div>
+
+    <header>
+      <div class="header">
+        <a href="index.html">
+          <div class="logo">
+            <img src="images/logo.png" alt="" />
+            <h1>IronWork</h1>
+          </div>
+        </a>
+        <div class="hamburger" onclick="menu()">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Şifremi Güncelle</a></li>
+            <li><a href="hakkimizda.html">Blog Ekle</a></li>
+            <li>
+              <a href="login.html">
+                <button class="buttonlogin">Oturumu Kapat</button>
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<div class="sifre">
+     
+
+  </div>
+    
+
+    <footer>
+      <div class="footer">
+        <div class="footer-in">
+          <div class="footer-left">
+            <a href="index.html">
+              <div class="logo">
+                <img src="images/logo-white.png" alt="" />
+                <h1 class="footer-ad">IronWork</h1>
+              </div>
+            </a>
+            <nav class="nav-footer">
+              <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+              </ul>
+
+              <a href="uyeol.html">
+                <button class="button-footer">Hemen Üye Ol</button>
+              </a>
+            </nav>
+          </div>
+
+          <div class="footer-center">
+            <h4 class="footer-bilgi-baslik">Bizi Takip Edin</h4>
+            <p>
+              Bizi sosyal medya hesaplarımızdan takip edin. Kampanyalardan
+              anında haberdar olun.
+            </p>
+            <div class="ikonlar">
+              <a href="https://www.facebook.com/" target="_blank">
+                <div class="facebook">
+                  <i class="fa-brands fa-facebook-f" style="color: #ffffff"></i>
+                </div>
+              </a>
+              <a href="https://twitter.com/?lang=tr" target="_blank">
+                <div class="twitter">
+                  <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <div class="instagram">
+                  <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
+                </div>
+              </a>
+              <a href="https://www.youtube.com/" target="_blank">
+                <div class="youtube">
+                  <i class="fa-brands fa-youtube" style="color: #ffffff"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <h4 class="footer-bilgi-baslik">Bilgilendirme</h4>
+            <div class="list">
+              <ul class="footer-bilgi">
+                <li><a href="">Hizmet Sözleşmesi</a></li>
+                <li><a href="">Gizlilik Sözleşmesi</a></li>
+                <li><a href="">Site Haritası</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="kayan-yazi">
+          <p class="copyright">
+            Copyright &#169; 2020 - 2023 IronWork Tüm Haklar Saklıdır.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/lightbox-plus-jquery.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
