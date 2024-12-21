@@ -19,37 +19,47 @@ Bu projenin amacı, web uygulamalarında sıklıkla karşılaşılan güvenlik z
 
 ### 3.1. Ana Sayfa  
 Proje hakkında genel bilgiler ve OWASP Top Ten listesinde yer alan güvenlik açıklarına yönelik açıklamalar sunar.
-<img src="images/anasayfa.png" alt="Ana Sayfa" width="75%">
+<img src="images/anasayfa.png" alt="Ana Sayfa" width="80%">
 
 ### 3.2. Üye Ol Sayfası  
 Kullanıcıların sisteme kayıt olmasını sağlayan formu içerir.
+<img src="images/uyeol.png" alt="Ana Sayfa" width="80%">
 
 ### 3.3. Giriş Yap Sayfası  
 Kullanıcı adı ve şifre doğrulama işlemi gerçekleştirilir.
+<img src="images/girisyap.png" alt="Ana Sayfa" width="80%">
 
 ### 3.4. Bloglar Sayfası  
 Tüm kullanıcıların blog yazılarının görüntülenebildiği bir sayfadır.
+<img src="images/bloglar.png" alt="Ana Sayfa" width="80%">
 
 ### 3.5. Blog Ekle Sayfası  
 Kullanıcılardan blog yazısı bilgileri ve resim dosyası alınarak sisteme ekleme yapılır. Ayrıca XML formatında blog ekleme desteği sunulmaktadır.
+<img src="images/blogekle.png" alt="Ana Sayfa" width="80%">
 
 ### 3.6. Bloglarım Sayfası  
 Kullanıcıların yalnızca kendi bloglarını görüntüleyebildiği, düzenleyebildiği veya silebildiği bir bölüm sunar.
+<img src="images/bloglarim.png" alt="Ana Sayfa" width="80%">
 
 ### 3.7. Blog Görüntüleme Sayfası  
 Blog yazısının detaylarını görüntüleme ve yazıya yorum yapma imkanı sunar.
+<img src="images/bloggoruntule.png" alt="Ana Sayfa" width="80%">
 
 ### 3.8. Parola Güncelle Sayfası  
 Kullanıcıların mevcut parolalarını değiştirebilecekleri bir form bulunur.
+<img src="images/parola.png" alt="Ana Sayfa" width="80%">
 
 ---
 
 ## 4. Veritabanı Yapısı  
 
 Bu proje kapsamında kullanılan MySQL veritabanı, üç ana tabloya sahiptir:  
-- **Blogs:** Blog yazılarını saklar.  
-- **Comments:** Bloglara yapılan yorumları saklar.  
-- **Users:** Kullanıcı bilgilerini saklar ve kimlik doğrulama işlemleri için kullanılır.  
+- **Blogs:** Blog yazılarını saklar.
+- <img src="images/blogs.png" alt="Ana Sayfa" width="80%">
+- **Comments:** Bloglara yapılan yorumları saklar.
+- <img src="images/comments.png" alt="Ana Sayfa" width="80%">
+- **Users:** Kullanıcı bilgilerini saklar ve kimlik doğrulama işlemleri için kullanılır.
+- <img src="images/users.png" alt="Ana Sayfa" width="80%">
 
 ---
 
@@ -59,7 +69,9 @@ Bu proje kapsamında kullanılan MySQL veritabanı, üç ana tabloya sahiptir:
 
 #### 5.1.1. IDOR (Insecure Direct Object References)  
 - **Açıklama:** Yetkisiz kullanıcıların URL parametrelerinde ID gibi verilere müdahale ederek başka kullanıcıların kaynaklarına erişim sağlayabileceği bir güvenlik açığıdır.  
-- **Örnek:** Bir kullanıcının blog düzenleme URL’sindeki `id` parametresini değiştirerek başka bir kullanıcının blogunu düzenlemesi.  
+- **Örnek:** Bir kullanıcının blog düzenleme URL’sindeki `id` parametresini değiştirerek başka bir kullanıcının blogunu düzenlemesi.
+- <img src="images/idor1.png" alt="Ana Sayfa" width="80%">
+<img src="images/idor2.png" alt="Ana Sayfa" width="80%">
 - **Çözüm Önerileri:**  
   - Her işlemde kullanıcı oturumu kontrol edilmelidir.  
   - Nesne kimliklerini doğrudan ifşa etmek yerine benzersiz referanslar (UUID) kullanılmalıdır.  
@@ -67,7 +79,8 @@ Bu proje kapsamında kullanılan MySQL veritabanı, üç ana tabloya sahiptir:
 
 #### 5.1.2. Cross-Site Request Forgery (CSRF)  
 - **Açıklama:** Kullanıcının oturum açmış olduğu bir sistemde farkında olmadan saldırganın yönlendirdiği işlemleri gerçekleştirdiği bir güvenlik zafiyetidir.  
-- **Örnek:** Kullanıcı oturumu açıkken saldırganın yönlendirdiği bir bağlantıya tıklaması sonucunda bir blog yazısının silinmesi (`php/delete_blog.php?id=16`).  
+- **Örnek:** Kullanıcı oturumu açıkken saldırganın yönlendirdiği bir bağlantıya tıklaması sonucunda bir blog yazısının silinmesi (`php/delete_blog.php?id=16`).
+- <img src="images/csrf.png" alt="Ana Sayfa" width="80%"> 
 - **Çözüm Önerileri:**  
   - Benzersiz CSRF token'ları kullanılarak işlemler doğrulanmalıdır.  
   - Token doğrulama işlemleri sunucu tarafında yapılmalıdır.  
@@ -89,11 +102,14 @@ Bu proje kapsamında kullanılan MySQL veritabanı, üç ana tabloya sahiptir:
 
 #### 5.3.1. SQL Enjeksiyonu (SQL Injection)  
 - **Açıklama:** Kullanıcı verilerinin doğrudan SQL sorgularına dahil edilmesi, saldırganların kötü niyetli girişlerle veritabanını manipüle etmesine olanak sağlar.  
-- **Örnek:** Kullanıcı giriş yap sayfasında parola bölümüne `' OR '1'='1` yazarak oturum açabilir.  
+- **Örnek:** Kullanıcı giriş yap sayfasında parola bölümüne `' OR '1'='1` yazarak oturum açabilir.
+- <img src="images/injection.png" alt="Ana Sayfa" width="80%">
 
 #### 5.3.2. Cross-Site Scripting (XSS)  
 - **Açıklama:** Kullanıcıdan alınan girdilerin çıktıda filtrelenmeden sunulması sonucunda, saldırganların kötü niyetli JavaScript kodları çalıştırmasına imkan tanır.  
-- **Örnek:** Blog yorum bölümüne `<script>alert('XSS test')</script>` eklenmesi ve çalıştırılması.  
+- **Örnek:** Blog yorum bölümüne `<script>alert('XSS test')</script>` eklenmesi ve çalıştırılması.
+- <img src="images/xss.png" alt="Ana Sayfa" width="80%">
+- 
 - **Çözüm Önerileri:**  
   - Tüm kullanıcı girdileri doğrulanmalı ve temizlenmelidir.  
   - Çıktılar `htmlspecialchars()` gibi fonksiyonlarla kodlanmalıdır.  
@@ -104,7 +120,8 @@ Bu proje kapsamında kullanılan MySQL veritabanı, üç ana tabloya sahiptir:
 
 #### 5.4.1. Dosya Yükleme Zafiyeti  
 - **Açıklama:** Kullanıcıların zararlı dosyalar (örneğin, kötü amaçlı PHP scriptleri) yükleyerek sunucuyu manipüle etmesine olanak sağlar.  
-- **Örnek:** Blog yazısı ekleme sayfasındaki resim yükleme yerine farklı türde dosyalar yüklenmesi.  
+- **Örnek:** Blog yazısı ekleme sayfasındaki resim yükleme yerine farklı türde dosyalar yüklenmesi.
+- - <img src="images/fileupload.png" alt="Ana Sayfa" width="80%">
 - **Çözüm Önerileri:**  
   - Yalnızca belirli dosya türlerine izin verilmelidir.  
   - Dosya türleri ve içerikleri MIME türü doğrulaması ile kontrol edilmelidir.  
