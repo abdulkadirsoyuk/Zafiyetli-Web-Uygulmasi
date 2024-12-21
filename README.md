@@ -19,6 +19,7 @@ Bu projenin amacı, web uygulamalarında sıklıkla karşılaşılan güvenlik z
 
 ### 3.1. Ana Sayfa  
 Proje hakkında genel bilgiler ve OWASP Top Ten listesinde yer alan güvenlik açıklarına yönelik açıklamalar sunar.
+![Ana Sayfa](images/anasayfa.png)
 
 ### 3.2. Üye Ol Sayfası  
 Kullanıcıların sisteme kayıt olmasını sağlayan formu içerir.
