@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaafiyetli Web Uygulaması</title>
+    <title>Zafiyetli Web Uygulaması</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <link rel="stylesheet" href="assets/styles/index.css">
 </head>
 <body>
 <header>
-<h1>Zaafiyetli Web Uygulaması</h1>
+<h1>Zafiyetli Web Uygulaması</h1>
 <button class="zbtn">
     <a href="blog.php"> Uygulamaya Git  </a>
     </button>
@@ -47,9 +47,7 @@
                 <li>Hassas bilgileri veya nesne kimliklerini ifşa etmek yerine, benzersiz ve rastgele üretilen referanslar (örneğin, UUID) kullanılmalı.</li>
                 <li>Her işlem için kullanıcı oturumunu kontrol edilmeli ve yalnızca yetkili kullanıcıların işlem yapmasına izin verilmeli.</li>
             </ul>
-            <button class="zbtn">
-                        <a href="login.php"> Sayfaya Git  </a>
-                    </button>
+       
                     <hr>
 
 
@@ -62,9 +60,7 @@
                 <li>Token'ı doğrulamak için sunucu tarafında ek bir kontrol mekanizması uygulanmalı.</li>
                 <li>Kullanıcı oturumlarında benzersiz bir oturum ID’si oluşturulmalı.</li>
             </ul>
-            <button class="zbtn">
-                        <a href="login.php"> Sayfaya Git  </a>
-                    </button>
+        
                   
 
 
@@ -113,9 +109,7 @@
                         <li>Parametreli sorgular (Prepared Statements) veya ORM'ler kullanılmalıdır.</li>
                         <li>Kullanıcı girdileri üzerinde giriş doğrulama (input validation) uygulanmalıdır.</li>
                     </ul>
-                    <button class="zbtn">
-                        <a href="login.php"> Sayfaya Git  </a>
-                    </button>
+               
                     <hr>
 
                     <h5 class="baslik">Cross-Site Scripting (XSS)</h5>
@@ -127,9 +121,7 @@
                         <li>İçerik Güvenlik Politikası (CSP) uygulanarak XSS riskleri azaltılabilir.</li>
                     </ul>
 
-                    <button class="zbtn">
-                        <a href="login.php"> Sayfaya Git  </a>
-                    </button>
+                
                   
 
         </div>
@@ -157,9 +149,7 @@
                         <li>Dosya adları rastgele üretilmeli ve güvenli bir dizine kaydedilmelidir.</li>
                         <li>Yüklenen dosyaların içerik taraması yapılmalıdır.</li>
                     </ul>
-                    <button class="zbtn">
-                        <a href="login.php"> Sayfaya Git  </a>
-                    </button>
+               
         </div>
     </div>
 </div>
