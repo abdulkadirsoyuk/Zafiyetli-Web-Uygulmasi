@@ -1,4 +1,4 @@
-# Zaafiyetli-Web-Uygulmasi
+# Zafiyetli-Web-Uygulmasi
 
 ## 1. Giriş  
 ### 1.1. Projenin Amacı  
